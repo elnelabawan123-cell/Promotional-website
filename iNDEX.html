@@ -1,73 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Resume</title>
-   <link rel="icon" type="img/jpg" href="images/486318263_1848459072655469_101791817573797900_n (1).jpg ">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentScape | Find Your Perfect Space</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;  
+   
+   background: linear-gradient(to right, #0B0742, #301E67);
 
+
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: lightgray;
+    }
+
+    header img {
+      width: 60px;
+      padding: 5px;
+    }
+
+    menu a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0b273a;
+      font-weight: 500;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: larger;
+    }
+
+    menu a:hover{
+        color: darkgray;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 100px;
+      gap: 50px;
+      padding-bottom: 10%;
+    }
+
+ 
+    .hero-text {
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: whitesmoke;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+ 
+
+    .hero-text button:hover {
+      background-color: darkgray;
+    }
+
+    .hero img {
+      width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+      }
+      .hero img {
+        width: 100%;
+      }
+    }
+
+    
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 100px;
+      
+    }
+
+    .text-section {
+      flex: 1;
+    }
+
+    .text-section h1 {
+      font-size: 48px;
+      color: white;
+    }
+
+    .text-section p {
+      color: whitesmoke;
+      font-size: 18px;
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      flex: 1;
+      justify-items: center;
+    }
+
+    .box {
+      width: 250px;
+      height: 200px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    .box h3 {
+      color: ;
+      margin: 10px 0;
+    }
+
+    .box p {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:  white;
+    color: #153f4f;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  
+  }
+
+
+  .btn:hover{
+     transform: scale(1.05);
+  }
+  .cen{
+    text-align: center;
+    justify-content: center;
+    background-color: white;
+  }
+
+  .about-container {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+gap: 30px;
+color: white;
+padding-top: 60px;
+
+}
+.about  {
+border: 2px solid #ccc;
+color: #333;
+background-image: url(images/678.png);
+border-radius: 10px;
+padding: 20px;
+color: white; }
+
+   img{
+  width: 250px;
+  filter: drop-shadow(0 0 30px #ccc);
+  animation: float 4s ease-in-out infinite;
+padding: 22px;
+border-radius: 5%;
+
+}
+
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.space{
+   font-size: 48px;
+  padding-top: 10px;
+    padding-top: 10px;
+}
+
+
+    
+  </style>
+</head>
 <body>
 
+  <header>
+    <img src="images/logorent.png" alt="RentScape Logo"  style="padding-left: 25px;">
+    <menu>
+      <a href="#">Home</a>
+      <a href="#features">Spaces</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </menu>
+  </header>
 
-    <center style=" padding-bottom: 10px;">
-        
-        <div style="max-width: 800px; background-color: gray; padding: 30px; border-radius: 15px;">
-        <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; transition: transform 0.3s;" onmouseover="this.style.transform ='scale(1.4)'" onmouseleave="this.style.transform = 'scale(1)'"> Resume</h1>
-        <img src="images/486318263_1848459072655469_101791817573797900_n (1).jpg" title="My Photo" width="200" height="200" style="border: solid black ; border-radius: 50%; transition: transform 0.3s; " onmouseover="this.style.transform = 'scale(1.4)'" onmouseleave="this.style.transform = 'scale(1)'" >
-                       
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Find Your Perfect Space with RentScape</h1>
+      <p>Discover a wide range of houses, apartments, commercial spaces, and boarding houses that fit your lifestyle and needs. With RentScape, your space tells your story.</p>
+ <a href="#features" class="btn">Rent Now</a>
+    </div>
+    <img src="images/commercial_space_for_rent_1662910873_538cf116_progressive.jpg" alt="Commercial Building">
+  </section>
+
+
+
+
+<section id="features">
+  <div class="container">
+    <div class="text-section">
+      <h1>Our Listings</h1>
+      <p>Explore available spaces across different categories</p>
      
-        <h1 style="color: solid black; transition: transform 0.3s;"  onmouseover="this.style.transform = 'scale(1.4)'" onmouseleave="this.style.transform = 'scale(1)'"> Elne Vincent M Labawn</h1>
-        
-       
-        <p style="font: size 10px; margin: 5px; border-bottom: 3px solid black;">
-             📧
-            <a href="https://mail.google.com/mail/u/0/?hl=en#inbox" target="_blank" title="Elnelabawan@gmail.com" style="color: blue;"  onmouseover="this.style.color = 'red' " onmouseout="this.style.color= 'blue'" onclick="this.style.color='darkblue'">   Email: Elnelabawan@gamail.com </a>|  📞 09943209045
-      
-        </p>
-        <br>
-   <p style=" font-family: Arial, Helvetica, sans-serif; margin:  2px;" f>
-   
-    Highly motivated and Hardworking Information System  student with a skills in web development, 
-    database management, and software design. Experienced in creating responsive websites using HTML, CSS, 
-    and JavaScript, with additional knowledge in Java and SQL. Passionate about problem-solving, learning 
-    new technologies, and contributing to innovative projects. Seeking opportunities to apply my skills 
-    in a professional environment while continuing to grow as a student.
-   </p>
-   <h1 style="transition: transform 0.3s;" onmouseover="this.style.transform = 'scale(1.4)'" onmouseleave="this.style.transform ='scale(1)'">  🎓 EDUCATION</h1>
-   <p style="border-bottom:  3px solid black; "></p>
+    </div>
 
-   <pre style="font-family: Arial, Helvetica, sans-serif;"> 
-    Elementary
-    Highschool
-    Senior Highschool
-    College
-   </pre>
-   <h1  onmouseover="this.style.transform = 'scale(1.4)'" onmouseleave="this.style.transform = 'scale(1)'"> ⚡SKILLS</h1>
-<p style="border-bottom: 3px  solid black;"></p>
-   <pre style="font-family: Arial, Helvetica, sans-serif;">
-* Web design
-* Web development
-* Database management
-* SQl Forte
-* Critical Thinker
-   </pre>
+    <div class="boxes">
+      <div class="box">
+        <h3>🏠 Houses</h3>
+        <p>Find cozy homes for families or individuals with the comfort you deserve.</p>
+      </div>
 
-<h1 style="transition: transform 0.3s;" onmouseover="this.style.transform = 'scale(1.4)'" onmouseleave="this.style.transform = 'scale(1)'">🧳EXPERIENCE</h1>
-<p style="border-bottom: 3px solid black;"></p>
-    
-    <pre style="font-family: Arial, Helvetica, sans-serif;">
-        *Built web apps and databases for 
-         practice and school projects
-         
-         *Build Calculator System
-    </pre>
+      <div class="box">
+        <h3>🏢 Apartments</h3>
+        <p>Modern apartments located in the heart of the city, perfect for professionals.</p>
+      </div>
+
+      <div class="box">
+        <h3>🏬 Commercial</h3>
+        <p>Spaces designed for businesses, startups, and shops of all kinds.</p>
+      </div>
+
+      <div class="box">
+        <h3>🏘️ Boarding Houses</h3>
+        <p>Affordable and safe spaces ideal for students and working individuals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="cen">
+<h1 class="space">ABOUT US</h1>
+<h3 style="padding-bottom: 10px;">Our Team and What Make Us Unique</h3>
 </div>
-    
-    </center>
+<br>
+<div>
+<img src="images2/ELNE.png" alt="">
+<img src="images2/GLYZA.png" alt="">
+<img src="images2/MALALY.png" alt="">
+<img src="images2/SARAH.png" alt="">
+<img src="images2/zandy.png" alt="">
+        
+  </div>
+</div>
 
-
-
-
+</section>
+  
 </body>
-
 </html>

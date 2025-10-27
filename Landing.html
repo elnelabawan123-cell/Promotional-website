@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wikaways</title>
+  <link rel="stylesheet" href="landingstyle.css">
+  <link rel="icon" href="images/Lgo.png">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family:'Bebas Neue', sans-serif;
+      color: white;
+    }
+
+    .video-bg {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 0 20px;
+      list-style: none;
+    }
+
+    .title {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .menu {
+      display: flex;
+    }
+
+    .menu li {
+      margin: 0 10px;
+    }
+
+    .menu a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      background-color: #fdbb00;
+    }
+
+    .content {
+      position: relative;
+      text-align: center;
+      top: 45%;
+      transform: translateY(-45%);
+      line-height: 1;
+    }
+
+    .content h1 {
+      margin: 0; 
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 64px;
+      letter-spacing: 0px;
+    }
+
+    .content p {
+      margin: 5px 0 15px 0; 
+      font-size: 1.2em;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #fdbb00;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #fdbb00;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <video autoplay muted loop class="video-bg">
+    <source src="LearningLanguage.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <ul>
+    <li class="title">Wikaways</li>
+    <div class="menu">
+      <li><a href="Wikaways.html">Home</a></li>
+      <li><a href="#news">About us</a></li>
+      <li><a href="#contact">Dictionary</a></li>
+      <li><a href="../M2L3/lesson3.html">Contact</a></li>
+    </div>
+  </ul>
+
+  <div class="content">
+    <h1>Learn Languages Anytime, Anywhere</h1>
+    <p>Join our community of global learners today.</p>
+    <button onclick="window.location.href='Wikaways.html'">Start Learning</button>
+  </div>
+
+</body>
+</html>

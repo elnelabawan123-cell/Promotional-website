@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wikaways</title>
+<link rel="icon" href="images/Lgo.png">
+<style>
+
+
+ul {
+      display: flex;
+      justify-content: space-between; /* title left, links right */
+      align-items: center;
+    
+      margin: 0;
+      padding: 0 20px;
+      list-style: none;
+    }
+
+    
+
+    .menu1 {
+      display: flex;
+    }
+
+    .menu1 li {
+      margin: 0 10px;
+    }
+
+    .menu1 a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .menu1 a:hover {
+   background: #fdbb00;
+    }
+
+
+  body {
+    font-family: 'Poppins', sans-serif;
+   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    color: #333333;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar {
+    width: 220px;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    justify-content: space-between; /* pushes content to top & bottom */
+    padding: 20px;
+  }
+
+  .profile {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+
+  .profile h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+  }
+
+  .menu a {
+    display: block;
+    text-decoration: none;
+    color:white;
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+  }
+
+  .menu a:hover, .menu .active {
+  background: #fdbb00;
+    color: #000000;
+  }
+
+  .logout {
+    margin-top: 50px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .main {
+    margin-left: 250px;
+    padding: 40px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .course-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  .course-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .course-content {
+    padding: 15px;
+  }
+
+  .course-content h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #000000;
+  }
+
+  .course-info {
+    font-size: 13px;
+    color: #333333;
+    margin-bottom: 8px;
+  }
+
+  .progress-bar {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .progress {
+    width: 25%;
+    height: 100%;
+    background: #fdbb00;
+  }
+
+  .btn {
+    background: #fdbb00;
+    border: none;
+    color: #000000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .btn:hover {
+    background:  #fdbb00;
+    color: #000000;
+  }
+
+  .font2{
+    font-size: large
+    ;
+    font-style: italic;
+  }
+  .back{
+      background: #fdbb00;
+  }
+   .logo-bottom img {
+    width: 120px;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+    <ul>
+    <li class="title">WIKAWAYS</li>
+    <div class="menu1">
+      <li><a href="Wikaways.html" class="back">Home</a></li>
+      <li><a href="#news">About us</a></li>
+      <li><a href="#contact">Translate</a></li>
+      <li><a href="CONTACTUS.html">Contact</a></li>
+    </div>
+  </ul>
+
+<div class="sidebar">
+  <div class="profile">
+     <h2>WIKAWAYS</h2>
+    <h3 style="color: white;">Language Learning Platform</h3>
+   
+  </div>
+  <div class="menu">
+   
+    <a href="#"  >Languages</a>
+    <a href="#">Ai Chat</a>
+
+ 
+  </div>
+</div>
+
+<div class="main">
+ 
+  <h2 style="color: white;">"Discover the ways of our wika" </h2>
+
+  <div class="course-grid">
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="">
+      <div class="course-content">
+        <h4>Learning Cebuano Words</h4>
+        <div class="course-info">Lesson: 1 | Students: 10 | Basic</div>
+        <div class="progress-bar"><div class="progress"></div></div>
+        <button class="btn">Let's go</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="">
+      <div class="course-content">
+        <h4>Learning Illongo Words</h4>
+        <div class="course-info">Lesson: 1 | Students: 1 | Basic</div>
+        <div class="progress-bar"><div class="progress"></div></div>
+        <button class="btn">Let's go</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="">
+      <div class="course-content">
+        <h4>Learning Surigaonon words</h4>
+        <div class="course-info">Lesson: 1 | Students: 10 | Basic</div>
+        <div class="progress-bar"><div class="progress"></div></div>
+        <button class="btn">Let's go</button>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="">
+      <div class="course-content">
+        <h4>Learning historical words and sentences</h4>
+        <div class="course-info">Lesson: 6 | Students: 198 | Advanced</div>
+        <div class="progress-bar"><div class="progress"></div></div>
+        <button class="btn">Let's go</button>
+      </div>
+    </div>
+
+
+
+
+    <div class="course-card">
+      <img src="https://via.placeholder.com/300x180" alt="">
+      <div class="course-content">
+        <h4>Learning historical words and sentences</h4>
+        <div class="course-info">Lesson: 6 | Students: 198 | Advanced</div>
+        <div class="progress-bar"><div class="progress"></div></div>
+        <button class="btn">Let's go</button>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+</div>
+
+</body>
+</html>

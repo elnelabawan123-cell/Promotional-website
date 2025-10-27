@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+
+
+
+ul {
+      display: flex;
+      justify-content: space-between; /* title left, links right */
+      align-items: center;
+    
+      margin: 0;
+      padding: 0 20px;
+      list-style: none;
+      padding-bottom: 50px;
+    }
+
+    
+
+    .menu1 {
+      display: flex;
+    }
+
+    .menu1 li {
+      margin: 0 10px;
+    }
+
+    .menu1 a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .menu1 a:hover {
+   background: #fdbb00;
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+
+    .contact-container {
+      display: flex;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-info {
+          background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 40px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-info h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .info-item i {
+      font-size: 20px;
+      margin-right: 15px;
+      color: #fff;
+    }
+
+    .info-item a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 50px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social-icons :hover {
+      color: #fdbb00;
+    }
+
+    .contact-form {
+      flex: 1.5;
+      padding: 40px;
+    }
+
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input, textarea {
+      border: none;
+      border-bottom: 1px solid #aaa;
+      padding: 8px 0;
+      font-size: 14px;
+      outline: none;
+      color: #333;
+      background: none;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #000;
+    }
+
+    .subject-options {
+      display: flex;
+      gap: 15px;
+      margin: 10px 0;
+    }
+
+    .subject-options label {
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .subject-options input {
+      margin-right: 5px;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .btn {
+      margin-top: 15px;
+      background-color: #fdbb00;
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #fdbb00;
+      color: #000;
+    }
+
+    @media (max-width: 850px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+
+ 
+}
+
+  .back{
+      background: #fdbb00;
+  }
+
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <ul>
+    <li class="title" style="color: white;">WIKAWAYS</li>
+    <div class="menu1">
+      <li><a href="Wikaways.html" >Home</a></li>
+      <li><a href="#news">About us</a></li>
+      <li><a href="#contact">Translate</a></li>
+      <li><a href="CONTACTUS.html"  class="back">Contact</a></li>
+    </div>
+  </ul>
+
+  <div class="contact-container">
+    <!-- Left Black Contact Info -->
+    <div class="contact-info">
+      <div>
+        <h2>Contact Us</h2>
+        <p>Say something and we can help you!</p>
+
+        <div class="info-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>📞 09184401857</span>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:demo@gmail.com">✉️ nashbagwapo@gmail.com</a>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>📍Purok,pomelo,Brgy Cagangohan,<br>Panabo City 8105 Panabo City</span>
+        </div>
+     
+      </div>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"> <img src="images/free-twitter-logo-icon-2429-thumb-removebg-preview.png" alt="twiter"  width="80px"height="80px" ></i></a>
+        <a href="#"><i class="fab fa-instagram">
+          <img src="images/facebook-icon-ios-facebook-social-media-logo-on-white-background-free-free-vector-removebg-preview.png" alt="facebook"  width="80px" height="80px"> </i></a>
+        <a href="#"><i class="fab fa-discord"> <img src="images/IG-iconupdate-removebg-preview.png" alt="fa-instagram" width="80px" height="80px"><img src="" alt=""></i></a>
+      </div>
+    </div>
+
+    <!-- Right Contact Form -->
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="John">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Doe">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="nashbagwapo@gmail.com">
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="09184401857">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Select Subject?</label>
+        <div class="subject-options">
+          <label><input type="radio" name="subject" checked> General Inquiry</label>
+          <label><input type="radio" name="subject"> Support</label>
+          <label><input type="radio" name="subject"> Feedback</label>
+          <label><input type="radio" name="subject"> Others</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Write your message.."></textarea>
+      </div>
+
+      <button class="btn">Send Message</button>
+    </div>
+  </div>
+
+</body>
+</html>

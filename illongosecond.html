@@ -1,6 +1,19 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Job Listing Cards</title> <style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilonggo Greeting</title>
+  <link rel="icon" href="images/Lgo.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0b2a38, #2f4b59);
+      color: #fff;
+    }
 
-ul {
+    ul {
       display: flex;
       justify-content: space-between; /* title left, links right */
       align-items: center;
@@ -32,81 +45,87 @@ ul {
    background: #fdbb00;
     }
 
+ 
 
-h2 {
-font-weight: 600;
-margin-bottom: 20px;
-}
+    /* MAIN SECTION */
+    main {
+      padding: 60px;
+      text-align: left;
+    }
 
-.job-container {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-gap: 30px;
-color: white;
-padding-top: 60px;
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
 
-}
+    h3 {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #ddd;
+    }
 
+    /* GRID SECTION */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
 
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
 
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
 
+    .card-content {
+      padding: 15px;
+    }
 
+    .card-content h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
 
-.job-card h3 {
-font-size: 1.1rem;
-margin: 10px 0 5px;
-}
+    .card-content p {
+      margin: 5px 0;
+    }
 
-.job-card p {
-font-size: 0.9rem;
-line-height: 1.4;
-margin-bottom: 15px;
-}
+    /* BUTTON */
+    .contact-btn {
+      display: block;
+      margin: 50px auto 0;
+      padding: 12px 30px;
+      background-color: #fdbb00;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
 
-.corporation {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 15px;
-}
+    .contact-btn:hover {
+      background-color: yellow;
+      transform: scale(1.05);
+    }
 
-
-
-
-
-.job-card  {
-border: 2px solid #ccc;
-color: #333;
-background-image: url(images/678.png);
-border-radius: 10px;
-padding: 20px;
-color: white;
-
-box-shadow: 0 4px 30px rgba(0,0,0,0.05);
-
-justify-content: center;
-text-align: center
-}
-
-.job-card h3,p{
-  display: flex;
-}
-
-body {
-   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  overflow-x: hidden;
-   font-family: 'Poppins', sans-serif;
-}
-
-
-</style>
-
+  </style>
 </head>
- <body>
-    
-    <div class="logo"> 
+<body>
  <ul>
     <li class="title">WIKAWAYS</li>
     <div class="menu1" >
@@ -115,64 +134,237 @@ body {
       <li><a href="#contact">Translate</a></li>
       <li><a href="CONTACTUS.html">Contact</a></li>
     </div>
-  </ul>
-    </div> 
+  </ul> 
 
 
+  <main>
+    <h2>ILONGGO GREETING</h2>
+    <h3>Basic Ilonggo Words</h3>
 
-    <h2>ILONGGO GREETING </h2> 
-    <h3>Basic Illonggo Words</h3>
-    <div class="job-container"> 
+    <div class="grid">
+      <div class="card">
     
-    <div class="job-card" > 
-    <h3>Englis</h3>  <p>Good Morning</p> 
-        <h3>Ilonggo</h3> <p>hdashf</p>
-    
-    </div>
+        <div class="card-content">
+          <h4>English: Good Morning</h4>
+          <p>Ilonggo: Maayong Aga</p>
+        </div>
+      </div>
 
-  <div class="job-card"> <h3>Englis</h3>  <p>Good Morning</p> 
-        <h3>Ilonggo</h3> <p>hdashf</p>
-    
-    
-    </div>
-  <div class="job-card"> <h3>Englis</h3>  <p>Good Morning</p> 
-        <h3>Ilonggo</h3> <p>hdashf</p>
-    
-    
-    </div>
+      <div class="card">
+       
+        <div class="card-content">
+          <h4>English: Hello</h4>
+          <p>Ilonggo: Kamusta</p>
+        </div>
+      </div>
 
-      <div class="job-card"> <h3>Englis</h3>  <p>Good Morning</p> 
-        <h3>Ilonggo</h3> <p>hdashf</p>
-    
-    
-    </div>
+      <div class="card">
+        
+        <div class="card-content">
+          <h4>English: Good Night</h4>
+          <p>Ilonggo: Maayong Gab-i</p>
+        </div>
+      </div>
 
-      <div class="job-card"> <h3>Englis</h3>  <p>Good Morning</p> 
-        <h3>Ilonggo</h3> <p>hdashf</p>
-    
-    
-    </div>
-
-      <div class="job-card"> <h3>Englis</h3>  <p>Good Morning</p> 
-        <h3>Ilonggo</h3> <p>hdashf</p>
-    
-    
-    </div>
-
-      <div class="job-card"> <h3>Englis</h3>  <p>Good Morning</p> 
-        <h3>Ilonggo</h3> <p>hdashf</p>
-    
-    
-    </div>
-
+      <div class="card">
      
+        <div class="card-content">
+          <h4>English: Eat</h4>
+          <p>Ilonggo: Kaon</p>
+        </div>
+      </div>
+
+      <div class="card">
+
+        <div class="card-content">
+          <h4>English: Thank You</h4>
+          <p>Ilonggo: Salamat</p>
+        </div>
+      </div>
+
+      <div class="card">
+
+        <div class="card-content">
+          <h4>English: Goodbye</h4>
+          <p>Ilonggo: Paalam</p>
+        </div>
+      </div>
+
+
+     <div class="card">
+ 
+        <div class="card-content">
+          <h4>English: Im fine, thank you</h4>
+          <p>Ilonggo: Maayo man, salamat</p>
+        </div>
+      </div>
+
+      <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Whats your name?</h4>
+          <p>Ilonggo: Ano ngalan mo?</p>
+        </div>
+      </div>
+
+           <div class="card">
+     
+        <div class="card-content">
+          <h4>English: My name is…</h4>
+          <p>Ang ngalan ko si…</p>
+        </div>
+      </div>
+
+           <div class="card">
+     
+        <div class="card-content">
+          <h4>English: Nice to meet you</h4>
+          <p>Ilonggo: Nalipay ako nga nakilala ka</p>
+        </div>
+      </div>
+
+           <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Hows your day?</h4>
+          <p>Kamusta adlaw mo?</p>
+        </div>
+      </div>
+
+           <div class="card">
+       
+        <div class="card-content">
+          <h4>English: . See you later</h4>
+          <p>Ilonggo: . Makitaay ta liwat</p>
+        </div>
+      </div>
+
+           <div class="card">
+        
+        <div class="card-content">
+          <h4>English: Take care</h4>
+          <p>Ilonggo:  Amping ka / Halong ka</p>
+        </div>
+      </div>
+
+           <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Welcome</h4>
+          <p>Ilonggo:  Dawata / Dayon</p>
+        </div>
+      </div>
+
+           <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Youre welcome</h4>
+          <p>Ilonggo:  Wala sang ano man</p>
+        </div>
+      </div>
+
+           <div class="card">
+  
+        <div class="card-content">
+          <h4>English: Goodbye</h4>
+          <p>Ilonggo: Paalam</p>
+        </div>
+      </div>
+
+           <div class="card">
+
+        <div class="card-content">
+          <h4>English: Long time no see</h4>
+          <p>Ilonggo:  Dugay na wala ta nagkita</p>
+        </div>
+      </div>
+
+           <div class="card">
+      
+        <div class="card-content">
+          <h4>English: How have you been?</h4>
+          <p>Ilonggo:  Kamusta ka na subong?</p>
+        </div>
+      </div>
+
+           <div class="card">
+        <div class="card-content">
+          <h4>English: Where are you going?</h4>
+          <p>Ilonggo:  Diin ka makadto?</p>
+        </div>
+      </div>
+
+           <div class="card">
+       
+        <div class="card-content">
+          <h4>English: Good to see you</h4>
+          <p>Ilonggo:  Maayo nga makita ka liwat</p>
+        </div>
+      </div>
+
+           <div class="card">
+     
+        <div class="card-content">
+          <h4>English: Have a nice day</h4>
+          <p>Ilonggo:  Maayo nga adlaw sa imo</p>
+        </div>
+      </div>
+
+           <div class="card">
+   
+        <div class="card-content">
+          <h4>English: Have a good trip</h4>
+          <p>Ilonggo:  Maayo nga biyahe</p>
+        </div>
+      </div>
+
+           <div class="card">
+        <div class="card-content">
+          <h4>English: Hows everything?</h4>
+          <p>Ilonggo:  Kamusta tanan?</p>
+        </div>
+      </div>
+
+           <div class="card">
+        
+        <div class="card-content">
+          <h4>English: Whats up?</h4>
+          <p>Ilonggo:  Ano ginaubra mo? / Ano na?</p>
+        </div>
+      </div>
+
+           <div class="card">
+       
+        <div class="card-content">
+          <h4>English: Sorry</h4>
+          <p>Ilonggo:  Pasensya / Sorry</p>
+        </div>
+      </div>
+
+
+         <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Excuse me</h4>
+          <p>Ilonggo:  Palihog </p>
+        </div>
+      </div>
 
 
 
 
 
+       <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Goodbye</h4>
+          <p>Ilonggo:  Paalam / Babay</p>
+        </div>
+      </div>
 
+    </div>
+    <button class="contact-btn">Illonggo Phrases</button>
+  </main>
 
- </div>
- </body> 
- </html>
+</body>
+</html>

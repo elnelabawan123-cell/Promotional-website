@@ -1,11 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentScape | Find Your Perfect Space</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0B0742, #301E67);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: lightgray;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    header img {
+      width: 60px;
+    }
+
+    menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    menu a {
+      text-decoration: none;
+      color: #0b273a;
+      font-weight: 500;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    menu a:hover {
+      color: darkgray;
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .burger div {
+      width: 28px;
+      height: 3px;
+      background: #0b273a;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 100px;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: whitesmoke;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: white;
+      color: #153f4f;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: darkgray;
+    }
+
+    .hero img {
+      width: 40%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* FEATURES SECTION */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 80px 100px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .text-section h1 {
+      font-size: 48px;
+      color: white;
+    }
+
+    .text-section p {
+      font-size: 18px;
+      color: whitesmoke;
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      flex: 1;
+    }
+
+    .box {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+      text-align: center;
+      color: #333;
+      transition: 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    .box h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* ABOUT SECTION */
+    .cen {
+      text-align: center;
+      background-color: white;
+      color: #0B0742;
+      padding: 40px 10px;
+    }
+
+    .team-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .team-section img {
+      width: 200px;
+      border-radius: 10px;
+      filter: drop-shadow(0 0 20px #ccc);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* TABLET */
+    @media (max-width: 1024px) {
+      header {
+        padding: 15px 30px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 40px;
+      }
+
+      .hero img {
+        width: 80%;
+      }
+
+      .container {
+        padding: 50px 40px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text-section h1 {
+        font-size: 38px;
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .burger {
+        display: flex;
+      }
+
+      menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      menu a {
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      .burger.active + menu {
+        display: flex;
+      }
+
+      .hero-text h1 {
+        font-size: 32px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+      }
+
+      .hero img {
+        width: 100%;
+      }
+
+      .container {
+        padding: 30px 20px;
+      }
+
+      .box {
+        width: 100%;
+      }
+
+      .team-section img {
+        width: 150px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>HELLO</h1>
+
+  <header>
+    <img src="images/logorent.png" alt="RentScape Logo">
+    <div class="burger" onclick="this.classList.toggle('active'); document.querySelector('menu').classList.toggle('show');">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <menu>
+      <a href="#">Home</a>
+      <a href="#features">Spaces</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </menu>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Find Your Perfect Space with RentScape</h1>
+      <p>Discover a wide range of houses, apartments, commercial spaces, and boarding houses that fit your lifestyle and needs. With RentScape, your space tells your story.</p>
+      <a href="#features" class="btn">Rent Now</a>
+    </div>
+    <img src="images/commercial_space_for_rent_1662910873_538cf116_progressive.jpg" alt="Commercial Building">
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="text-section">
+        <h1>Our Listings</h1>
+        <p>Explore available spaces across different categories</p>
+      </div>
+
+      <div class="boxes">
+        <div class="box">
+          <h3>🏠 Houses</h3>
+          <p>Find cozy homes for families or individuals with the comfort you deserve.</p>
+        </div>
+
+        <div class="box">
+          <h3>🏢 Apartments</h3>
+          <p>Modern apartments located in the heart of the city, perfect for professionals.</p>
+        </div>
+
+        <div class="box">
+          <h3>🏬 Commercial</h3>
+          <p>Spaces designed for businesses, startups, and shops of all kinds.</p>
+        </div>
+
+        <div class="box">
+          <h3>🏘️ Boarding Houses</h3>
+          <p>Affordable and safe spaces ideal for students and working individuals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cen">
+      <h1>ABOUT US</h1>
+      <h3>Our Team and What Makes Us Unique</h3>
+    </div>
+    <div class="team-section">
+      <img src="images2/ELNE.png" alt="">
+      <img src="images2/GLYZA.png" alt="">
+      <img src="images2/MALALY.png" alt="">
+      <img src="images2/SARAH.png" alt="">
+      <img src="images2/zandy.png" alt="">
+    </div>
+  </section>
+
 </body>
 </html>

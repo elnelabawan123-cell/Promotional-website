@@ -1,131 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Photo and Grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #f8fbff, #0B0742);
+      color: white;
+      padding: 20px;
+    }
 
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-    <style>
-        .product-listing {
-  max-width:1200px;
-  margin:0 auto;
-  padding: 40px 20px;
-}
-.breadcrumbs a {
-  color:#0073E6;
-  text-decoration:none;
-}
-.breadcrumbs { margin-bottom:20px; font-size:14px; color:#666; }
+    .photo {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-h1 {
-  font-size:28px;
-  margin-bottom:10px;
-}
-.filter-sort-bar {
-  display:flex;
-  gap:15px;
-  margin-bottom:30px;
-  flex-wrap:wrap;
-}
-.filter-sort-bar input,
-.filter-sort-bar select { 
-  padding:10px;
-  font-size:16px;
-  border:1px solid #ccc;
-  border-radius:4px;
-}
-.grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(280px,1fr));
-  gap:24px;
-}
-.card {
-  background:#fff;
-  border-radius:4px;
-  box-shadow:0 0 6px rgba(0,0,0,0.1);
-  display:flex;
-  flex-direction:column;
-  padding:20px;
-  transition: transform .2s, box-shadow .2s;
-}
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow:0 4px 12px rgba(0,0,0,0.15);
-}
-.card img {
-  width:100%;
-  height:auto;
-  margin-bottom:15px;
-}
-.card h2 { font-size:20px; margin:0 0 10px; }
-.card p { color:#555; flex:1; }
-.price {
-  font-size:22px;
-  font-weight:bold;
-  margin:10px 0;
-}
-.btn-primary {
-  background:#0073E6;
-  color:#fff;
-  padding:10px 20px;
-  border:none;
-  border-radius:4px;
-  cursor:pointer;
-  font-size:16px;
-}
-.btn-secondary {
-  background:transparent;
-  color:#0073E6;
-  padding:10px 20px;
-  border:2px solid #0073E6;
-  border-radius:4px;
-  font-size:16px;
-  margin-top:10px;
-}
-.load-more {
-  text-align:center;
-  margin:40px 0;
-}
+    .photo img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
 
-    </style>
+    .grid {
+      flex: 1 1 300px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.05);
+    }
+
+    /* Responsive for small screens (like 320px) */
+    @media (max-width: 480px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .photo img {
+        width: 90%;
+      }
+
+      .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .box {
+        font-size: 14px;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo img {
+        width: 100%;
+      }
+    }
+
+  </style>
 </head>
 <body>
-    <section class="product-listing">
-  <div class="breadcrumbs">
-    <a href="/">Home</a> › <a href="/Accessories/">Accessories</a> › <a href="/Accessories/PatAsst/">PatAsst</a> › Merchant Boards
-  </div>
 
-  <h1>Merchant Boards</h1>
-  <p>Explore our range of Merchant Boards — robust, high-performance, and designed for seamless integration.</p>
-
-  <div class="filter-sort-bar">
-    <input type="search" placeholder="Search merchant boards…" aria-label="Search products">
-    <select aria-label="Sort by">
-      <option value="relevance">Relevance</option>
-      <option value="price-low">Price: Low to High</option>
-      <option value="price-high">Price: High to Low</option>
-      <option value="newest">Newest Arrivals</option>
-    </select>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <img src="product-thumb1.jpg" alt="Merchant Board Model A">
-      <h2>Model A Merchant Board</h2>
-      <p>Intel i7 • 16 GB DDR4 • 512 GB NVMe</p>
-      <div class="price">₱29,900</div>
-      <button class="btn-primary">Add to Cart</button>
-      <button class="btn-secondary">View Details</button>
+  <div class="container">
+    <div class="photo">
+      <img src="your-photo.png" alt="Responsive Photo">
     </div>
-    <!-- more cards… -->
-  </div>
 
-  <div class="load-more">
-    <button class="btn-primary">Load More Products</button>
+    <div class="grid">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+      <div class="box">Box 4</div>
+      <div class="box">Box 5</div>
+      <div class="box">Box 6</div>
+    </div>
   </div>
-</section>
 
 </body>
 </html>

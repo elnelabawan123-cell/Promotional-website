@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentScape</title>
+  <style>
+    /* CONTACT SECTION */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+         background: linear-gradient(to right, #0B0742, #301E67);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: lightgray;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    header img {
+      width: 60px;
+    }
+
+    menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    menu a {
+      text-decoration: none;
+      color: #0b273a;
+      font-weight: 500;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    menu a:hover {
+      color: darkgray;
+    }
+
+    /* BURGER ICON */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .burger div {
+      width: 28px;
+      height: 3px;
+      background: #0b273a;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    #contact {
+   
+      color: white;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    #contact h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    #contact p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    form {
+      background: white;
+      color: #0B0742;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      max-width: 600px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px 15px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: none;
+    }
+
+    .btn {
+      background:#0B0742;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: gray;
+      transform: scale(1.03);
+    }
+
+    footer {
+      background: #0B0742;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1024px) {
+
+      #contact h1 {
+        font-size: 32px;
+      }
+      #contact p {
+        font-size: 16px;
+      }
+      form {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+  
+      #contact h1 {
+        font-size: 28px;
+      }
+      #contact p {
+        font-size: 15px;
+      }
+      input, textarea {
+        font-size: 15px;
+      }
+      button {
+        font-size: 15px;
+      }
+
+      .burger {
+        display: flex;
+      }
+
+      menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      menu.show {
+        display: flex;
+      }
+
+      menu a {
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+      }
+
+    }
+  </style>
+</head>
+<body>
+ 
+    <header>
+    <img src="images/logorent.png" alt="RentScape Logo">
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <menu>
+      <a href="#home">Home</a>
+      <a href="#features">Spaces</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </menu>
+  </header>
+
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>Have a question or want to schedule a visit? Fill out the form below and we’ll get back to you soon!</p>
+
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <a href="2ndpage.html"  class="btn" type="button"> Send Message</a>
+     
+    </form>
+  </section>
+
+  <footer>
+    © 2025 RentScape | All Rights Reserved
+  </footer>
+
+</body>
+</html>

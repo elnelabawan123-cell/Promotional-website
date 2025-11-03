@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentScape | Find Your Perfect Space</title>
+  <link rel="icon" href="images2/logo3.jpg">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0B0742, #301E67);
+      color: white;
+      overflow-x: hidden;
+    }
+    body h2{
+      color: white;
+      text-align: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    body h1 {
+        padding-top: 10px;
+       text-align: center;
+      justify-content: center
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: lightgray;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    header img {
+      width: 60px;
+    }
+
+    menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    menu a {
+      text-decoration: none;
+      color: #0b273a;
+      font-weight: 500;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    menu a:hover {
+      color: darkgray;
+    }
+
+    /* BURGER ICON */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .burger div {
+      width: 28px;
+      height: 3px;
+      background: #0b273a;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 100px;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: whitesmoke;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    button {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: white;
+      color: #153f4f;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: darkgray;
+    }
+
+    .hero img {
+      width: 40%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        animation: float 4s ease-in-out infinite;
+    }
+
+    /* FEATURES SECTION */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 80px 100px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .text-section h1 {
+      font-size: 48px;
+      color: white;
+    }
+
+    .text-section p {
+      font-size: 18px;
+      color: whitesmoke;
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      flex: 1;
+    }
+
+    .box {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s ease;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    .box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .box-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .box-content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #0B0742;
+    }
+
+    .box-content p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .box-button {
+      display: inline-block;
+      background: #0B0742;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+      margin: 0 auto 20px;
+      width: fit-content;
+    }
+
+    .box-button:hover {
+      background: #301E67;
+      transform: scale(1.05);
+    }
+
+    /* ABOUT SECTION */
+    .cen {
+      text-align: center;
+      color:  #0B0742;
+      background:lightgray;
+      padding:  10px;
+    }
+
+    .team-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .team-section img {
+      width: 200px;
+      border-radius: 10px;
+      filter: drop-shadow(0 0 20px #ccc);
+      animation: float 4s ease-in-out infinite;
+    }
+   .Vission-container {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 30px;
+    }
+
+    .vision-card {
+      background: white;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .vision-card:hover {
+      transform: scale(1.05);
+    }
+
+    .vision-icon {
+      font-size: 40px;
+      color: #7B2CBF; /* Purple */
+      margin-bottom: 10px;
+    }
+
+    .vision-title {
+      font-weight: bold;
+      font-size: 20px;
+      color: #0B0742;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .vision-text {
+      color: #555;
+      font-size: 14px;
+      max-width: 150px;
+      line-height: 1.5;
+    }
+
+    .pad{
+      padding-top: 50%;
+    }
+
+    .contact-section {
+      text-align: center;
+      padding: 50px 20px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .contact-section h3 {
+      color: #ff5f40;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 2px solid #ff5f40;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+
+    .contact-section h1 {
+      font-size: 32px;
+      color: #0B0742;
+      margin-bottom: 10px;
+    }
+
+    .contact-section h1 span {
+      color: #ff5f40;
+    }
+
+    .contact-section p {
+      color: #666;
+      font-size: 15px;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      line-height: 1.6;
+    }
+
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .contact-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      width: 230px;
+      padding: 25px 20px;
+      text-align: left;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .contact-card .icon {
+      font-size: 26px;
+      color: #ff5f40;
+      margin-bottom: 10px;
+    }
+
+    .contact-card h4 {
+      color: #0B0742;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .contact-card h3 {
+      color: #ff5f40;
+      font-size: 15px;
+      margin-bottom: 8px;
+      border: none;
+      display: block;
+      padding: 0;
+    }
+
+    .contact-card p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    
+
+    footer {
+     
+      color:  white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+
+    /* TABLET */
+    @media (max-width: 1024px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 40px;
+      }
+
+      .hero img {
+        width: 80%;
+      }
+
+      .container {
+        padding: 50px 40px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text-section h1 {
+        font-size: 38px;
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .burger {
+        display: flex;
+      }
+
+      menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      menu.show {
+        display: flex;
+      }
+
+      menu a {
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      .hero-text h1 {
+        font-size: 32px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+      }
+
+      .hero img {
+        width: 100%;
+      }
+
+      .container {
+        padding: 30px 20px;
+      }
+
+      .team-section img {
+        width: 150px;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images2/logo3.jpg" alt="RentScape Logo">
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <menu>
+      <a href="#home">Home</a>
+      <a href="#features">Spaces</a>
+      <a href="#about">About</a>
+      <a href="#contacts">Contact</a>
+    </menu>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Find Your Perfect Space with RentScape</h1>
+      <p>Discover a wide range of houses, apartments, commercial spaces, and boarding houses that fit your lifestyle and needs. With RentScape, your space tells your story.</p>
+     <button onclick="window.open('https://www.figma.com/design/PBrUJ7HYeyGNbOG9I1MGG8/Untitled?node-id=0-1&p=f&t=ULlIUjHDzFr40P3r-0', '_blank')">Rent Now</button>
+    </div>
+    <img src="images/commercial_space_for_rent_1662910873_538cf116_progressive.jpg" alt="Commercial Building">
+  </section>
+ <hr>
+  <section id="features">
+    <div class="container">
+      <div class="text-section">
+        <h1 class="pad">Featured Properties</h1>
+        <p>Explore available spaces across different categories</p>
+      </div>
+
+      <div class="boxes">
+        <div class="box">
+          <img src="images2/housw3.jpg" alt="House for Rent">
+          <div class="box-content">
+            <h3>🏠 Houses</h3>
+            <p>Cozy and modern homes perfect for families or individuals.</p>
+          </div>
+          <a href="RentContact.html" class="box-button">Contact Us Now</a>
+        </div>
+
+        <div class="box">
+          <img src="images2/housew4.jpg" alt="Apartment">
+          <div class="box-content">
+            <h3>🏢 Apartments</h3>
+            <p>Stylish city apartments ideal for professionals and couples.</p>
+          </div>
+          <a href="RentContact.html" class="box-button">Contact Us Now</a>
+        </div>
+
+        <div class="box">
+          <img src="images2/housw2.jpg" alt="Commercial Space">
+          <div class="box-content">
+            <h3>🏬 Commercial</h3>
+            <p>Business-ready spaces for shops, offices, and startups.</p>
+          </div>
+          <a href="RentContact.html" class="box-button">Contact Us Now</a>
+        </div>
+
+        <div class="box">
+          <img src="images2/haous1.jpg" alt="Boarding House">
+          <div class="box-content">
+            <h3>🏘️ Boarding Houses</h3>
+            <p>Affordable and secure rooms for students and workers.</p>
+          </div>
+          <a href="RentContact.html" class="box-button">Contact Us Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<hr>
+  <section id="about">
+    
+      <h1>ABOUT US</h1>
+      <h2> What Makes Us Unique</h2>
+   <hr>
+   <div class="Vission-container">
+    <div class="vision-card">
+      <div class="vision-icon">🎯</div>
+      <div class="vision-title">MISSION</div>
+      <div class="vision-text">
+        To make renting easy and stress-free.
+      </div>
+    </div>
+
+    <div class="vision-card">
+      <div class="vision-icon">👁️</div>
+      <div class="vision-title">VISION</div>
+      <div class="vision-text">
+        To help people and businesses find the perfect space.
+      </div>
+    </div>
+  </div>
+  
+    <div class="team-section">
+      <img src="images2/ELNE.png" alt="">
+      <img src="images2/GLYZA.png" alt="">
+      <img src="images2/MALALY.png" alt="">
+      <img src="images2/SARAH.png" alt="">
+      <img src="images2/zandy.png" alt="">
+    </div>
+  </section>
+ <hr>
+  <section id="contacts" >
+    
+
+    
+    <h1>Contact & Join Us</h1>
+
+
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <h4>Location</h4>
+        <h3>Visit Us At</h3>
+        <p>Mangga 3 Streey,<br>Pomelo Cagangohan, Panabo City</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">📞</div>
+        <h4>24/7 Service</h4>
+        <h3>Call Us On</h3>
+        <p>Tel: ++63 2 845 2826<br>Mob: +63184401857</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">✉️</div>
+        <h4>Drop a Line</h4>
+        <h3>Mail Address</h3>
+        <p>RentScape@gmail.com<br>glyzapanget123@company.com</p>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">🕒</div>
+        <h4>Active hours</h4>
+        <h3>Time</h3>
+        <p>Mon - Fri: 9am - 12mn<br>Sunday 9am - 5pm </p>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <footer>
+    © 2025 RentScape. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector('menu').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
+

@@ -1,80 +1,377 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mexico</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilonggo Greeting</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0b2a38, #2f4b59);
+      color: #fff;
+    }
 
+    ul {
+      display: flex;
+      justify-content: space-between; /* title left, links right */
+      align-items: center;
+    
+      margin: 0;
+      padding: 0 20px;
+      list-style: none;
+    }
+
+    
+
+    .menu1 {
+      display: flex;
+    }
+
+    .menu1 li {
+      margin: 0 10px;
+    }
+
+    .menu1 a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    .menu1 a:hover {
+   background: #fdbb00;
+    }
+
+ 
+
+    /* MAIN SECTION */
+    main {
+      padding: 60px;
+      text-align: left;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #ddd;
+    }
+
+    /* GRID SECTION */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content h4 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .card-content p {
+      margin: 5px 0;
+    }
+
+    /* BUTTON */
+    .contact-btn {
+      display: block;
+      margin: 50px auto 0;
+      padding: 12px 30px;
+      background-color: #fdbb00;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .contact-btn:hover {
+      background-color: yellow;
+      transform: scale(1.05);
+    }
+
+  </style>
 </head>
 <body>
-       <button style="background-color: gray;">
-        <a href="map.html">
-            Back to Map
-        </a>
-       </button>
-<div style="display: flex; gap: 40px; background: gray; padding: 60px; border-radius:  5%;">
-
-  <!-- Image 1 -->
-  <div style="position: relative; display: inline-block; border-radius: 20%; overflow: hidden;">
-    <img src="images/indonesia.jpg" alt="mexico" width="400" height="200" style="display:block; border-radius: 20%;">
-    <div style="
-      position: absolute; 
-      bottom: 10px; 
-      left: 50%; 
-      transform: translateX(-50%);
-      color: aqua; 
-      font-weight: bold; 
-      text-shadow: 2px 2px 5px black;">
-      WELCOME TO INDONESIA
+ <ul>
+    <li class="title">WIKAWAYS</li>
+    <div class="menu1" >
+      <li><a href="Wikaways.html" class="back">Home</a></li>
+      <li><a href="#news">About us</a></li>
+      <li><a href="#contact">Translate</a></li>
+      <li><a href="CONTACTUS.html">Contact</a></li>
     </div>
-  </div>
+  </ul> 
+
+
+  <main>
+    <h2>ILONGGO GREETING</h2>
+    <h3>Basic Ilonggo Words</h3>
+
+    <div class="grid">
+      <div class="card">
+    
+        <div class="card-content">
+          <h4>English: Good Morning</h4>
+          <p>Ilonggo: Maayong Aga</p>
+        </div>
+      </div>
+
+      <div class="card">
+       
+        <div class="card-content">
+          <h4>English: Hello</h4>
+          <p>Ilonggo: Kamusta</p>
+        </div>
+      </div>
+
+      <div class="card">
+        
+        <div class="card-content">
+          <h4>English: Good Night</h4>
+          <p>Ilonggo: Maayong Gab-i</p>
+        </div>
+      </div>
+
+      <div class="card">
+     
+        <div class="card-content">
+          <h4>English: Eat</h4>
+          <p>Ilonggo: Kaon</p>
+        </div>
+      </div>
+
+      <div class="card">
+
+        <div class="card-content">
+          <h4>English: Thank You</h4>
+          <p>Ilonggo: Salamat</p>
+        </div>
+      </div>
+
+      <div class="card">
+
+        <div class="card-content">
+          <h4>English: Goodbye</h4>
+          <p>Ilonggo: Paalam</p>
+        </div>
+      </div>
+
+
+     <div class="card">
+ 
+        <div class="card-content">
+          <h4>English: Im fine, thank you</h4>
+          <p>Ilonggo: Maayo man, salamat</p>
+        </div>
+      </div>
+
+      <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Whats your name?</h4>
+          <p>Ilonggo: Ano ngalan mo?</p>
+        </div>
+      </div>
+
+           <div class="card">
+     
+        <div class="card-content">
+          <h4>English: My name is…</h4>
+          <p>Ang ngalan ko si…</p>
+        </div>
+      </div>
+
+           <div class="card">
+     
+        <div class="card-content">
+          <h4>English: Nice to meet you</h4>
+          <p>Ilonggo: Nalipay ako nga nakilala ka</p>
+        </div>
+      </div>
+
+           <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Hows your day?</h4>
+          <p>Kamusta adlaw mo?</p>
+        </div>
+      </div>
+
+           <div class="card">
+       
+        <div class="card-content">
+          <h4>English: . See you later</h4>
+          <p>Ilonggo: . Makitaay ta liwat</p>
+        </div>
+      </div>
+
+           <div class="card">
+        
+        <div class="card-content">
+          <h4>English: Take care</h4>
+          <p>Ilonggo:  Amping ka / Halong ka</p>
+        </div>
+      </div>
+
+           <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Welcome</h4>
+          <p>Ilonggo:  Dawata / Dayon</p>
+        </div>
+      </div>
+
+           <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Youre welcome</h4>
+          <p>Ilonggo:  Wala sang ano man</p>
+        </div>
+      </div>
+
+           <div class="card">
   
+        <div class="card-content">
+          <h4>English: Goodbye</h4>
+          <p>Ilonggo: Paalam</p>
+        </div>
+      </div>
 
-  <!-- Image 2 -->
+           <div class="card">
+
+        <div class="card-content">
+          <h4>English: Long time no see</h4>
+          <p>Ilonggo:  Dugay na wala ta nagkita</p>
+        </div>
+      </div>
+
+           <div class="card">
+      
+        <div class="card-content">
+          <h4>English: How have you been?</h4>
+          <p>Ilonggo:  Kamusta ka na subong?</p>
+        </div>
+      </div>
+
+           <div class="card">
+        <div class="card-content">
+          <h4>English: Where are you going?</h4>
+          <p>Ilonggo:  Diin ka makadto?</p>
+        </div>
+      </div>
+
+           <div class="card">
+       
+        <div class="card-content">
+          <h4>English: Good to see you</h4>
+          <p>Ilonggo:  Maayo nga makita ka liwat</p>
+        </div>
+      </div>
+
+           <div class="card">
+     
+        <div class="card-content">
+          <h4>English: Have a nice day</h4>
+          <p>Ilonggo:  Maayo nga adlaw sa imo</p>
+        </div>
+      </div>
+
+           <div class="card">
+   
+        <div class="card-content">
+          <h4>English: Have a good trip</h4>
+          <p>Ilonggo:  Maayo nga biyahe</p>
+        </div>
+      </div>
+
+           <div class="card">
+        <div class="card-content">
+          <h4>English: Hows everything?</h4>
+          <p>Ilonggo:  Kamusta tanan?</p>
+        </div>
+      </div>
+
+           <div class="card">
+        
+        <div class="card-content">
+          <h4>English: Whats up?</h4>
+          <p>Ilonggo:  Ano ginaubra mo? / Ano na?</p>
+        </div>
+      </div>
+
+           <div class="card">
+       
+        <div class="card-content">
+          <h4>English: Sorry</h4>
+          <p>Ilonggo:  Pasensya / Sorry</p>
+        </div>
+      </div>
 
 
-  <div style="position: relative; display: inline-block; border-radius: 20%; overflow: hidden;">
-    <img src="images/indonesia1.jpg" alt="mexico" width="400" height="200" style="display:block; border-radius: 20%;">
-    <div style="
-      position: absolute; 
-      bottom: 10px; 
-      left: 50%; 
-      transform: translateX(-50%);
-      color: aqua; 
-      font-weight: bold; 
-      text-shadow: 2px 2px 5px black;">
-      HELLO
+         <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Excuse me</h4>
+          <p>Ilonggo:  Palihog </p>
+        </div>
+      </div>
+
+
+
+
+
+       <div class="card">
+      
+        <div class="card-content">
+          <h4>English: Goodbye</h4>
+          <p>Ilonggo:  Paalam / Babay</p>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+    
     </div>
-  </div>
+    <button class="contact-btn">Illonggo Phrases</button>
+  </main>
 
-  <!-- Image 3 -->
-  <div style="position: relative; display: inline-block; border-radius: 20%; overflow: hidden;">
-    <img src="images/indonesia2.jpg" alt="mexico" width="400" height="200" style="display:block; border-radius: 20%;">
-    <div style="
-      position: absolute; 
-      bottom: 10px; 
-      left: 50%; 
-      transform: translateX(-50%);
-      color: aqua; 
-      font-weight: bold; 
-      text-shadow: 2px 2px 5px black;">
-      THIS IS INDONESIA
-    </div>
-  </div>
-
-
-</div>
-  <center>
-<div style="max-width: 900px; background-color: gray; border-radius:  5%;">
-
-<p style="color: white;">Indonesia is a large and diverse country located in Southeast Asia and Oceania, made up of more than 17,000 islands, including major ones like Java, Sumatra, Borneo (shared with Malaysia and Brunei), Sulawesi, and Papua. Its capital city is Jakarta, which is situated on the island of Java. Indonesia is the world’s fourth most populous country, with over 270 million people, and it has hundreds of ethnic groups and languages, though the official language is Indonesian (Bahasa Indonesia). The country has a tropical climate and stunning natural landscapes, including volcanoes, rainforests, beaches, and coral reefs. Indonesia has a rich cultural heritage influenced by indigenous traditions as well as Hindu, Buddhist, Islamic, and Western cultures, and it is known for traditional arts, dances, batik textiles, and gamelan music. It is the world’s largest Muslim-majority nation, and it celebrates many cultural and religious festivals. Indonesia’s economy is one of the largest in Southeast Asia, driven by industries such as agriculture, mining, manufacturing, and tourism, with famous destinations like Bali, Yogyakarta, and Komodo Island attracting visitors from around the world.</p>
-    </div>
-    </center>
- <br>
- <br>
-    <div style="background-color: gray; border-radius: 5%;">
-<center>
-        <h1 style="font-family: Arial, Helvetica, sans-serif; color: white;"> Thank you for visiting </h1>
-</center>
-    </div>
 </body>
 </html>

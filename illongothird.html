@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wikaways</title>
+  <link rel="icon" href="images/Lgo.png">
+  <style>
+
+   
+   
+   
+    body {
+        background: linear-gradient(to right, #0b2a38, #2f4b59);
+     
+    }
+    .body{
+       min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+       
+     ul {
+
+    justify-content: space-between; /* title left, links right */
+    align-items: center;
+    margin: 0;
+    padding: 0 20px;
+    list-style: none;
+    display: flex;
+  }
+
+  .title {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .menu a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  .menu a:hover {
+    background-color: #fdbb00;
+    color: #000;
+  }
+
+  .back {
+    background-color: #fdbb00;
+    color: #000;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+
+   .page-text {
+      text-align: center;
+      margin-top: 130px; /* adds space below fixed navbar */
+      margin-bottom: 30px;
+    }
+
+    .page-text h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .page-text p {
+      font-size: 1.2em;
+      color: #ddd;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      width: 100%;
+      max-width: 1200px;
+     
+     
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      padding: 8px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+
+    .video {
+      background: white;
+      border-radius: 0 0 15px 15px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video video {
+      width: 100%;
+      border-radius: 10px;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+<ul>
+    <li class="title"><a href="landingpage.html">WIKAWAYS</a></li>
+    <div class="menu">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="Translate.html">Translate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </div>
+  </ul>
+<section class="page-text">
+    <h1>Hi And Welcome To Advance Class</h1>
+    <p>The Ilonggo Phrases</p>
+  </section>
+
+
+  <div class="body">
+
+  <div class="container">
+ 
+    <!-- Video Card 1 -->
+    <div class="card">
+      <div class="card-header">
+      <h4>Ilonggo Friendship Phrase</h4>
+      </div>
+        
+      <div class="video">
+        <video controls poster="https://via.placeholder.com/300x180/6a00f4/ffffff?text=Video+1">
+          <source src="first.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Video Card 2 -->
+    <div class="card">
+      <div class="card-header">
+          <h4>Ilonggo Social Phrase</h4>
+      </div>
+      <div class="video">
+        <video controls poster="https://via.placeholder.com/300x180/6a00f4/ffffff?text=Video+2">
+          <source src="2nd.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Video Card 3 -->
+    <div class="card">
+      <div class="card-header">
+          <h4>Ilonggo Daily Phrase</h4>
+      </div>
+      <div class="video">
+        <video controls poster="https://via.placeholder.com/300x180/6a00f4/ffffff?text=Video+3">
+          <source src="lastclip.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</body>
+</html>

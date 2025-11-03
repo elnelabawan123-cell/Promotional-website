@@ -1,209 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Periodic Table</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RentScape | Find Your Perfect Space</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
- <style>
     body {
-    font-family:Arial, Helvetica, sans-serif;
-    text-align: center;
-    padding-left: 82px;
-}
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0B0742, #301E67);
+      color: white;
+      overflow-x: hidden;
+    }
 
-h1 {
-    text-align: center;
-    font-size: 40px;
-    height: 35px;
-    font-family:'Times New Roman', Times, serif;
-}
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: lightgray;
+      flex-wrap: wrap;
+      position: relative;
+    }
 
-td {
-    height: 20px;
-    width: 60px;
-    border: 2px solid black;
-}
+    header img {
+      width: 60px;
+    }
 
-table {
-    margin: 20px;
-}
- </style>
+    menu {
+      display: flex;
+      gap: 20px;
+    }
 
-<body style="display: flex; justify-content: center; background-color:  gray;">
+    menu a {
+      text-decoration: none;
+      color: #0b273a;
+      font-weight: 500;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    menu a:hover {
+      color: darkgray;
+    }
+
+    /* BURGER ICON */
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .burger div {
+      width: 28px;
+      height: 3px;
+      background: #0b273a;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 100px;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: whitesmoke;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: white;
+      color: #153f4f;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: darkgray;
+    }
+
+    .hero img {
+      width: 40%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* FEATURES SECTION */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 80px 100px;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .text-section h1 {
+      font-size: 48px;
+      color: white;
+    }
+
+    .text-section p {
+      font-size: 18px;
+      color: whitesmoke;
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      flex: 1;
+    }
+
+    .box {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s ease;
+      color: #333;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    .box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .box-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .box-content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #0B0742;
+    }
+
+    .box-content p {
+      font-size: 14px;
+      color: #555;
+    }
+
+     .box-button {
+      display: inline-block;
+      background: #0B0742;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+      margin-bottom: 20px;
+    }
+    /* ABOUT SECTION */
+    .cen {
+      text-align: center;
+      background-color: white;
+      color: #0B0742;
+      padding: 40px 10px;
+    }
+
+    .team-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .team-section img {
+      width: 200px;
+      border-radius: 10px;
+      filter: drop-shadow(0 0 20px #ccc);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* TABLET */
+    @media (max-width: 1024px) {
+      header {
+        padding: 15px 30px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 40px;
+      }
+
+      .hero img {
+        width: 80%;
+      }
+
+      .container {
+        padding: 50px 40px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text-section h1 {
+        font-size: 38px;
+      }
+    }
+
+    /* MOBILE / CELLPHONE */
+    @media (max-width: 768px) {
+      .burger {
+        display: flex;
+      }
+
+      menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      menu.show {
+        display: flex;
+      }
+
+      menu a {
+        color: white;
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      .hero-text h1 {
+        font-size: 32px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+      }
+
+      .hero img {
+        width: 100%;
+      }
+
+      .container {
+        padding: 30px 20px;
+      }
+
+      .team-section img {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="images/logorent.png" alt="RentScape Logo">
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <menu>
+      <a href="#">Home</a>
+      <a href="#features">Spaces</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </menu>
+  </header>
+
+<br>
+<br>
+<br>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Find Your Perfect Space with RentScape</h1>
+      <p>Discover a wide range of houses, apartments, commercial spaces, and boarding houses that fit your lifestyle and needs. With RentScape, your space tells your story.</p>
+      <a href="#features" class="btn">Rent Now</a>
+    </div>
+    <img src="images/commercial_space_for_rent_1662910873_538cf116_progressive.jpg" alt="Commercial Building">
+  </section>
+
+  <!-- FEATURES WITH PHOTOS -->
+  <section id="features">
+    <div class="container">
+      <div class="text-section">
+        <h1 style="padding-top: 40%;">Our Listings</h1>
+        <p>Explore available spaces across different categories</p>
+      </div>
+
+      <div class="boxes">
+        <div class="box">
+          <img src="images2/housew4.jpg" alt="House for Rent">
+          <div class="box-content">
+            <h3>🏠 Houses</h3>
+            <p>Cozy and modern homes perfect for families or individuals.</p>
+           
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="images2/housw3.jpg" alt="Apartment">
+          <div class="box-content">
+            <h3>🏢 Apartments</h3>
+            <p>Stylish city apartments ideal for professionals and couples.</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="images2/housw2.jpg" alt="Commercial Space">
+          <div class="box-content">
+            <h3>🏬 Commercial</h3>
+            <p>Business-ready spaces for shops, offices, and startups.</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="images2/haous1.jpg" alt="Boarding House">
+          <div class="box-content">
+            <h3>🏘️ Boarding Houses</h3>
+            <p>Affordable and secure rooms for students and workers.</p>
+          </div>
+          <a href="" class="box-button"> Contact Us Now</a>
+        </div>
+      </div>
     
-    
-    <table style="background-color: white;">
-        <tr style=" background-color: aqua;">
-            <th colspan="19">
-                <h1>THE PERIODIC TABLE</h1>
-            </th>
-        </tr>
-       
-        <tr style="font-size: larger;">
-            <td rowspan="1" style="background:#f0f0f0;">Period 1</td>
-            <td bgcolor="orange" style="color: green; ">1<br><area title="Hydrogen">H</td>
-            <th colspan="16" style="empty-cells: hide;"></th>
-            <td bgcolor="#e8e3ff" style="color: green;">2<br><area title="Helium">He</td>
-        </tr>
-        
-        <tr style="font-size: larger;">
-            <td rowspan="1" style="background:#f0f0f0;">2</td>
-            <td bgcolor="#df9fe1">3<br><area title="Lithium">Li</td>
-            <td bgcolor="#99d3ee">4<br><area title="Berylium">Be</td>
-            <td colspan="10" style="empty-cells: hide;"></td>
-            <td bgcolor="#c6980e">5<br><area title="Boron">B</td>
-            <td bgcolor="orange">6<br><area title="Carbon">C</td>
-            <td bgcolor="orange" style="color: green;">7<br><area title="Nitrogen">N</td>
-            <td bgcolor="orange" style="color: green;">8<br><area title="Oxygen">O</td>
-            <td bgcolor="#eddda8" style="color: green;">9<br><area title="Florine">F</td>
-            <td bgcolor="#e8e3ff" style="color: green;">10<br><area title="Neon">Ne</td>
-        </tr>
+  </section>
+  
+  <section>
+    <div class="cen">
+      <h1>ABOUT US</h1>
+      <h3>Our Team and What Makes Us Unique</h3>
+    </div>
+    <div class="team-section">
+      <img src="images2/ELNE.png" alt="">
+      <img src="images2/GLYZA.png" alt="">
+      <img src="images2/MALALY.png" alt="">
+      <img src="images2/SARAH.png" alt="">
+      <img src="images2/zandy.png" alt="">
+    </div>
+  </section>
 
-        <tr style="font-size: larger;">
-            <td rowspan="1" style="background:#f0f0f0;">3</td>
-            <td bgcolor="#df9fe1">11<br><area title="Sodium">Na</td>
-            <td bgcolor="#99d3ee">12<br><area title="Magnesium">Mg</td>
-            <td colspan="10" style="empty-cells: hide;"></td>
-            <td bgcolor="#cfeb88">13<br><area title="Auminium">Al</td>
-            <td bgcolor="#c6980e">14<br><area title="Silicon">Si</td>
-            <td bgcolor="orange">15<br><area title="Phosphorus">P</td>
-            <td bgcolor="orange">16<br><area title="Sulphur">S</td>
-            <td bgcolor="#eddda8" style="color: green;">17<br><area title="Chlorine">Cl</td>
-            <td bgcolor="#e8e3ff" style="color: green;">18<br><area title="Argon">Ar</td>
-        </tr>
-
-        <tr style="font-size: larger;">
-            <td rowspan="1" style="background:#f0f0f0;">4</td>
-            <td bgcolor="#df9fe1">19<br><area title="Potassium">K</td>
-            <td bgcolor="#99d3ee">20<br><area title="Calcium">Ca</td>
-            <td bgcolor="#fcf389">21<br><area title="Scandium">Sc</td>
-            <td bgcolor="#fcf389">22<br><area title="Titanium">Ti</td>
-            <td bgcolor="#fcf389">23<br><area title="Vanadium">V</td>
-            <td bgcolor="#fcf389">24<br><area title="Cromium">Cr</td>
-            <td bgcolor="#fcf389">25<br><area title="Manganese">Mn</td>
-            <td bgcolor="#fcf389">26<br><area title="Iron">Fe</td>
-            <td bgcolor="#fcf389">27<br><area title="Cobalt">Co</td>
-            <td bgcolor="#fcf389">28<br><area title="Nickel">Ni</td>
-            <td bgcolor="#fcf389">29<br><area title="Copper">Cu</td>
-            <td bgcolor="#fcf389">30<br><area title="Zinc">Zn</td>
-            <td bgcolor="#cfeb88" style="color: blue;">31<br><area title="Gallium">Ga</td>
-            <td bgcolor="#c6980e">32<br><area title="Germanium">Ge</td>
-            <td bgcolor="#c6980e">33<br><area title="Arsenic">As</td>
-            <td bgcolor="orange">34<br><area title="Selenium">Se</td>
-            <td bgcolor="#eddda8" style="color: blue;">35<br><area title="Bromine">Br</td>
-            <td bgcolor="#e8e3ff" style="color: green;">36<br><area title="Krypton">Kr</td>
-        </tr>
-
-        <tr style="font-size: larger;">
-            <td rowspan="1" style="background:#f0f0f0;">5</td>
-            <td bgcolor="#df9fe1">37<br><area title="Rubidium">Rb</td>
-            <td bgcolor="#99d3ee">38<br><area title="Strontium">Sr</td>
-            <td bgcolor="#fcf389">39<br><area title="Yttrium">Y</td>
-            <td bgcolor="#fcf389">40<br><area title="Zirconium">Zr</td>
-            <td bgcolor="#fcf389">41<br><area title="Niobium">Nb</td>
-            <td bgcolor="#fcf389">42<br><area title="Molybdenum">Mo</td>
-            <td bgcolor="#fcf389">43<br><area title="Technetium">Tc</td>
-            <td bgcolor="#fcf389">44<br><area title="Ruthenium">Ru</td>
-            <td bgcolor="#fcf389">45<br><area title="Rhodium">Rh</td>
-            <td bgcolor="#fcf389">46<br><area title="Palladium">Pd</td>
-            <td bgcolor="#fcf389">47<br><area title="Silver">Ag</td>
-            <td bgcolor="#fcf389">48<br><area title="Cadmium">Cd</td>
-            <td bgcolor="#cfeb88">49<br><area title="Indium">In</td>
-            <td bgcolor="#cfeb88">50<br><area title="Tin">Sn</td>
-            <td bgcolor="#c6980e">51<br><area title="Antimony">Sb</td>
-            <td bgcolor="#c6980e">52<br><area title="Tellurium">Te</td>
-            <td bgcolor="#eddda8">53<br><area title="Iodine">I</td>
-            <td bgcolor="#e8e3ff" style="color: green;">54<br><area title="Xenon">Xe</td>
-        </tr>
-
-        <tr style="font-size: larger;">
-            <td rowspan="1" style="background:#f0f0f0;">6</td>
-            <td bgcolor="#df9fe1" style="color: blue;">55<br><area title="Ceasium">Cs</td>
-            <td bgcolor="#99d3ee">56<br><area title="Barium">Ba</td>
-            <td bgcolor="#feeff2" style="font-size: small;font-weight:600;">57-71 <br> <br><br></td>
-            <td bgcolor="#fcf389">72<br><area title="Hafnium">Hf</td>
-            <td bgcolor="#fcf389">73<br><area title="Tantalum">Ta</td>
-            <td bgcolor="#fcf389">74<br><area title="Tungsten">W</td>
-            <td bgcolor="#fcf389">75<br><area title="Rhenium">Re</td>
-            <td bgcolor="#fcf389">76<br><area title="Osmium">Os</td>
-            <td bgcolor="#fcf389">77<br><area title="Iridium">Ir</td>
-            <td bgcolor="#fcf389">78<br><area title="Platium">Pt</td>
-            <td bgcolor="#fcf389">79<br><area title="Gold">Au</td>
-            <td bgcolor="#fcf389" style="color: blue;">80<br><area title="Mercury">Hg</td>
-            <td bgcolor="#cfeb88">81<br><area title="Thallium">Tl</td>
-            <td bgcolor="#cfeb88">82<br><area title="Lead">Pb</td>
-            <td bgcolor="#cfeb88">83<br><area title="Bismuth">Bi</td>
-            <td bgcolor="#c6980e">84<br><area title="Polonium">Po</td>
-            <td bgcolor="#eddda8">85<br><area title="Astatine">At</td>
-            <td bgcolor="#e8e3ff" style="color: green;">86<br><area title="Radon">Rn</td>
-        </tr>
-
-        <tr style="font-size: larger;">
-            <td rowspan="1" style="background:#f0f0f0;">7</td>
-            <td bgcolor="#df9fe1" style="color: blue;">87<br><area title="Francium">Fr</td>
-            <td bgcolor="#99d3ee">88<br><area title="Radium">Ra</td>
-            <td bgcolor="#feeff2"  style="font-size: small; font-weight:600;">89-103 <br><br> <br></td>
-            <td bgcolor="#fcf389" style="color: rgb(214, 32, 32);">104<br><area title="Rutherfordium">Rf</td>
-            <td bgcolor="#fcf389" style="color: rgb(214, 32, 32);">105<br><area title="Dubnium">Db</td>
-            <td bgcolor="#fcf389" style="color: rgb(214, 32, 32);">106<br><area title="Seaborgium">Sg</td>
-            <td bgcolor="#fcf389" style="color: rgb(214, 32, 32);">107<br><area title="Bohrium">Bh</td>
-            <td bgcolor="#fcf389" style="color: rgb(214, 32, 32);">108<br><area title="Hassium">Hs</td>
-            <td bgcolor="#fcf389" style="color: rgb(214, 32, 32);">109<br><area title="Meitnerium">Mt</td>
-            <td bgcolor="#fcf389" style="color: rgb(214, 32, 32);">110<br><area title="Darmstadtium">Ds</td>
-            <td bgcolor="#fcf389" style="color: rgb(214, 32, 32);">111<br><area title="Roentgenium">Rg</td>
-            <td bgcolor="#fcf389" style="color: rgb(214, 32, 32);">112<br><area title="Copernicium">Cn</td>
-            <td style="color: rgb(214, 32, 32);">113<br><area title="Nihonium">Nh</td>
-            <td style="color: rgb(214, 32, 32);">114<br><area title="Flerovium">Fl</td>
-            <td style="color: rgb(214, 32, 32);">115<br><area title="Moscovium">Mc</td>
-            <td style="color: rgb(214, 32, 32);">116<br><area title="Livermorium">Lv</td>
-            <td style="color: rgb(214, 32, 32);">117<br><area title="Tennessine">Ts</td>
-            <td style="color: rgb(214, 32, 32);">118<br><area title="Oganesson">Og</td>
-        </tr>
-
-        <tr>
-           <td style="border: none; height: 30px;"></td>
-        </tr>
-
-        <tr style="font-size: larger;">
-            <td rowspan="3" colspan="3" style="empty-cells: hide;"></td>
-            <td bgcolor="#feeff2">57<br><area title="Lanthanum">La</td>
-            <td bgcolor="#feeff2">58<br><area title="Cerium">Ce</td>
-            <td bgcolor="#feeff2">59<br><area title="Praseodymium">Pr</td>
-            <td bgcolor="#feeff2">60<br><area title="Neodymium">Nd</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">61<br><area title="Promethium">Pm</td>
-            <td bgcolor="#feeff2">62<br><area title="Samarium">Sm</td>
-            <td bgcolor="#feeff2">63<br><area title="Europium">Eu</td>
-            <td bgcolor="#feeff2">64<br><area title="Gadolinium">Gd</td>
-            <td bgcolor="#feeff2">65<br><area title="Terbium">Tb</td>
-            <td bgcolor="#feeff2">66<br><area title="Dysprosium">Dy</td>
-            <td bgcolor="#feeff2">67<br><area title="Holmium">Ho</td>
-            <td bgcolor="#feeff2">68<br><area title="Erbium">Er</td>
-            <td bgcolor="#feeff2">69<br><area title="Thulium">Tm</td>
-            <td bgcolor="#feeff2">70<br><area title="Yttterbium">Yb</td>
-            <td bgcolor="#feeff2">71<br><area title="Lutetium">Lu</td>
-        </tr>
-
-        <tr style="font-size: larger;">
-            <td bgcolor="#feeff2">89<br><area title="Actinium">Ac</td>
-            <td bgcolor="#feeff2">90<br><area title="Thorium">Th</td>
-            <td bgcolor="#feeff2">91<br><area title="Protactinium">Pa</td>
-            <td bgcolor="#feeff2">92<br><area title="Uranium">U</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">93<br><area title="Neptunium">Np</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">94<br><area title="Plutonium">Pu</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">95<br><area title="Americium">Am</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">96<br><area title="Curium">Cm</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">97<br><area title="Berkelium">Bk</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">98<br><area title="Californium">Cf</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">99<br><area title="Einsteinium">Es</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">100<br><area title="Fermium">Fm</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">101<br><area title="Mendelevium">Md</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">102<br><area title="Nobelium">No</td>
-            <td bgcolor="#feeff2" style="color: rgb(214, 32, 32);">103<br><area title="Lawrencium">Lr</td>
-        </tr>
-    </table>
+  <script>
+    // BURGER MENU FUNCTION
+    function toggleMenu() {
+      document.querySelector('menu').classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
